@@ -25,9 +25,9 @@ jobs:
           uses: google-github-actions/setup-gcloud@v3.0.1
 
         - name: Start the vm-platform-seed
-          run: gcloud compute instances start ${{ env.VM_NAME }} --zone=${{ env.VM_NAME }}
+          run: gcloud compute instances start ${{ env.VM_NAME }} --zone=${{ env.ZONE }}
 
         - name: Connect with the vm-platform-seed through SSH
           run: > 
-              gcloud compute ssh ${{ env.VM_NAME }} --zone=${{ env.VM_NAME }}
+              gcloud compute ssh ${{ env.VM_NAME }} --zone=${{ env.ZONE }}
               --command "echo 'Connected to the vm-platform-seed successfully!'"
