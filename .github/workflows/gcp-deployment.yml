@@ -34,6 +34,6 @@ jobs:
               --command "echo 'Connected to the vm-platform-seed successfully!' &&
               cd capstone-project-platform/ &&
               git pull --recurse-submodules &&
-              source .bashrc &&
+              source !/.bashrc &&
               mvn clean package
               "
