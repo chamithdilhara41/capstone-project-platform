@@ -31,5 +31,5 @@ jobs:
           run: > 
               gcloud compute ssh ${{ env.VM_NAME }} --zone=${{ env.ZONE }}
               --command "echo 'Connected to the vm-platform-seed successfully!' &&
-              cd capstone-project-platform/
+              cd capstone-project-platform
             "
